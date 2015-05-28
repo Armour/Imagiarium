@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ImageViewController.h"
 
 @interface ViewController ()
 
@@ -14,14 +15,12 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[ImageViewController class]]) {
+        ImageViewController *ivc = (ImageViewController *)segue.destinationViewController;
+        ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://f.hiphotos.baidu.com/zhidao/pic/item/0824ab18972bd407e830e7c678899e510fb3091%@.jpg", segue.identifier]];
+        ivc.title =segue.identifier;
+    }
 }
 
 @end

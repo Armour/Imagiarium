@@ -102,6 +102,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="scrollView" destination="e4P-pi-LNY" id="Ehx-Lm-EVm"/>
+                        <outlet property="spinner" destination="g7U-dR-sdK" id="UVo-BH-e1G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0v-ZS-uh4" userLabel="First Responder" sceneMemberID="firstResponder"/>

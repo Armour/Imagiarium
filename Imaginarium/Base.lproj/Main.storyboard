@@ -73,11 +73,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4P-pi-LNY">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="g7U-dR-sdK">
+                                <rect key="frame" x="169" y="316" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4P-pi-LNY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="g7U-dR-sdK" secondAttribute="centerX" id="1BW-xr-F9h"/>
+                            <constraint firstItem="g7U-dR-sdK" firstAttribute="top" secondItem="LeG-Jy-Ip8" secondAttribute="bottom" constant="260" id="6bu-KB-f10"/>
+                            <constraint firstAttribute="centerY" secondItem="g7U-dR-sdK" secondAttribute="centerY" constant="-1" id="Nd7-sn-nVF"/>
+                            <constraint firstItem="e4P-pi-LNY" firstAttribute="bottom" secondItem="NtO-7I-KTq" secondAttribute="top" id="PLY-cd-Hap"/>
+                            <constraint firstItem="e4P-pi-LNY" firstAttribute="leading" secondItem="Imr-oc-dHG" secondAttribute="leading" id="SJV-t5-U27"/>
+                            <constraint firstItem="e4P-pi-LNY" firstAttribute="centerX" secondItem="g7U-dR-sdK" secondAttribute="centerX" id="f13-Oh-Cga"/>
+                            <constraint firstItem="e4P-pi-LNY" firstAttribute="top" secondItem="Imr-oc-dHG" secondAttribute="top" id="iXS-KL-gFS"/>
+                            <constraint firstAttribute="trailing" secondItem="e4P-pi-LNY" secondAttribute="trailing" id="t44-Hq-d6l"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="f13-Oh-Cga"/>
+                                <exclude reference="6bu-KB-f10"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
